@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bài tập số 1</title>
+</head>
+<body>
+        <b>AMOUNT</b>
+        <input type="text" id="dauvao" value="1">
+        <b>FROM CURRENCY </b>
+        <select id="from">
+            <option value="vnd">VIET NAM DONG</option>
+            <option value="usd">USD</option>
+        </select>
+        <b>TO CURRENCY   </b>
+        <select id="to">
+            <option value="usd">USD</option>
+            <option value="vnd">VIET NAM DONG</option>
+        </select>
+        <button type="button"onclick="convert()">CONVERT</button>
+        <input type="text" id="ketqua" value="">
+        <script type="text/javascript">
+            function convert() {
+                let tyGia=parseFloat(document.getElementById("dauvao").value);
+                let monney1=document.getElementById("from").value;
+                let money2=document.getElementById("to").value;
+                let result;
+                if (monney1==="vnd"&& money2==="vnd") {
+                    result=tyGia;
+                } else if (money2==="usd"&& monney1==="usd") {
+                    result=tyGia;
+                }else  if (monney1==="vnd" && money2==="usd") {
+                    result=tyGia/23000;
+                } else {
+                    result=tyGia*23000;
+                }
+                document.getElementById("ketqua").value=result;
+            }
+        </script>
+
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>test</title>
+</head>
+<body>
+    <input id="firstNumber" type="text">
+    <input id="secondNumber" type="text"><br>
+    <button type="button" onclick="tinhToan('+')">+</button>
+    <button type="button" onclick="tinhToan('-')">-</button>
+    <button type="button" onclick="tinhToan('*')">X</button>
+    <button type="button" onclick="tinhToan('/')">:</button>
+    <p id="result">Kết quả : </p>
+    <script type="text/javascript">
+        function tinhToan(a) {
+            let number1=parseFloat(document.getElementById("firstNumber").value);
+            let number2=parseFloat(document.getElementById("secondNumber").value);
+            let result;
+            switch (a) {
+                case "+":
+                    result=number1+number2;
+                    break;
+                case "-":
+                    result=number1-number2;
+                    break;
+                case "*":
+                    result=number1*number2;
+                    break;
+                case "/":
+                    result=number1/number2;
+                    break;
+            }
+            document.getElementById("result").innerHTML="kết quả :"+result;
+        }
+    </script>
+
+</body>
+</html>
